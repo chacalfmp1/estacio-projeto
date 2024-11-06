@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviço Automotivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img\logo.jpg" alt="Logo Oficina" class="logo">
+    </header>
+
+    <div class="container">
+        <h1>Agende seu Serviço Automotivo</h1>
+        <form id="formAgendamento">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required><br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações do Carro</legend>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" required><br><br>
+
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" required><br><br>
+
+                <label for="ano">Ano:</label>
+                <input type="number" id="ano" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Serviço</legend>
+                <label for="servico">Selecione o serviço:</label>
+                <select id="servico" required>
+                    <option value="revisao">Revisão</option>
+                    <option value="motor">Motor</option>
+                    <option value="funilaria">Funilaria</option>
+                    <option value="grilo">Grilo</option>
+                    <option value="outros">Outros</option>
+                </select><br><br>
+
+                <label for="data">Data para agendamento:</label>
+                <input type="date" id="data" required><br><br>
+            </fieldset>
+
+            <button type="submit">Agendar</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <h2>Agendamento Realizado:</h2>
+            <p id="dadosAgendamento"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
